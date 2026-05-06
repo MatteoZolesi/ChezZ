@@ -1,0 +1,114 @@
+:root {
+  --colore-uno: rgb(67, 40, 24);
+  --colore-due: rgb(153, 88, 42);
+  --colore-tre: rgb(187, 148, 87);
+  --colore-quattro: rgb(255, 230, 167);
+  --colore-cinque: rgb(111, 29, 27);
+  --colore-ombra: rgb(40, 25, 15);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--colore-uno);
+  height: 100vh;
+  width: 100vw;
+  font-size: 2rem;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#BoxClassifica {
+  padding: 1% 0 1% 0;
+  height: 90%;
+  width: 70%;
+  background-color: var(--colore-ombra);
+  border-radius: 10px;
+  border: 1rem solid black;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ScoreTable {
+    height: 90%;
+    width: 80%;
+    margin-bottom: 1%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+}
+
+#ScoreTable::-webkit-scrollbar { /*per chrome*/
+  display: none;
+}
+
+.tableHead {
+  height: 15%;
+  width: 100%;
+  background-color: var(--colore-due);
+  border: 0.2rem solid black;
+
+  font-size: 4rem;
+  color: var(--colore-quattro);
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+}
+
+.Elemento {
+  margin: 0;
+  height: 10%;
+  width: 100%;
+  background-color: var(--colore-quattro);
+  border-left: 0.2rem solid black;
+  border-right: 0.2rem solid black;
+  border-bottom: 0.2rem solid black;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr 2fr;
+}
+
+#MenuPrincipaleBTN {
+  height: 5rem;
+  background-color: var(--colore-tre);
+  border: 5px solid black;
+  font-family: "Caveat", sans-serif;
+  width: 50%;
+  height: 12%;
+  color: white;
+  font-size: 4rem;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+ #MenuPrincipaleBTN:hover {
+  background-color: var(--colore-cinque);
+  border: 10px solid var(--colore-uno);
+  transform: scale(1.11);
+}
+
+.tableHead p, .Elemento p{
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.posizione ,.username{
+    border-right:2px solid black;
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Info & Regole</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/stile-Info&Regole.css" />
+    <link rel="stylesheet" href="../CSS/stile-ChessBoard.css" />
+    <script src="../JS/utility.js"></script>
+    <script src="../JS/createChessBoard.js"></script>
+    <script src="../JS/MossePezzi/initDivs.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", initMenuPrincipale);
+
+      function initMenuPrincipale() {
+        let MenuPrincipale = document.getElementById("MenuPrincipale");
+        MenuPrincipale.addEventListener("click", () => {
+          goTo("../index.php");
+        });
+      }
+    </script>
+  </head>
+  <body id="corpo">
+    <div id="BarraLaterale">
+      <button id="MenuPrincipale">Menu Principale</button>
+
+      <div class="Sez">
+        <div class="titolo">Pezzi</div>
+        <div class="BoxInfoPezzo" id="info-Pawn">Pedone</div>
+        <div class="BoxInfoPezzo" id="info-Rook">Torre</div>
+        <div class="BoxInfoPezzo" id="info-Knight">Cavallo</div>
+        <div class="BoxInfoPezzo" id="info-Bishop">Alfiere</div>
+        <div class="BoxInfoPezzo" id="info-Queen">Regina</div>
+        <div class="BoxInfoPezzo" id="info-King">Re</div>
+      </div>
+      <div class="Sez">
+        <div class="titolo">
+          Mosse <br />
+          Speciali
+        </div>
+        <div class="BoxInfoPezzo" id="info-Arrocco">Arrocco</div>
+        <div class="BoxInfoPezzo" id="info-EnPassant">En Passant</div>
+        <div class="BoxInfoPezzo" id="info-Promozione">Promozione</div>
+      </div>
+      <div class="Sez">
+        <div class="titolo">
+          Pezzi Speciali <br />
+          Speciali
+        </div>
+        <div class="BoxInfoPezzo" id="info-Cammello">Cammello</div>
+        <div class="BoxInfoPezzo" id="info-Tarallo">Tar-allo</div>
+        <div class="BoxInfoPezzo" id="info-Cavolfiore">Cav-olfiore</div>
+      </div>
+    </div>
+    <div id="box">
+      <div id="ChessBoard-container"></div>
+    </div>
+  </body>
+</html>

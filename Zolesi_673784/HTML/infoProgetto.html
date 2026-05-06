@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>InfoProgetto</title>
+    <script>
+      function menu(){
+        window.location.href ="../index.php";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>ChezZ</h1>
+    <p>
+      Nel menu principale è possibile fare il login cliccando su "Login" in alto a destra. <br />
+      Se si vuole cambiare account si puo ricliccare dove è comparso il nome del giocatore.<br>
+      Gli utenti che ho registrato per i test hanno tutti password 1234.<br>
+      Nomi utenti: <br>
+      -Matteo09 <br>
+      -Salvo12 <br>
+      -Dario14 <br>
+      Per la registrazione basta mettere un Username che non è presente nel DB, dato che è l'unica chiave primaria. <br><br>
+      Ci sono 4 bottoni:
+    </p>
+    <h3>Gioca&Ruota</h3>
+    <p>
+      Richiede il login, nella pagina verra chiesto un secondo login per il
+      Giocatore Nero. <br />
+      Quando la partita finisce compare il tasto rigioca per riniziare la
+      partita, inoltre vengono assegnati i punti ai giocatori (+3 win -3 loss).
+    </p>
+    <h3>Classifica</h3>
+    <p>
+        Vengono mostrati i punteggi in ordine decrescente dei giocatori registrati.
+    </p>
+    <h3>
+        Partita Personalizzata
+    </h3>
+    <p>
+        Ti permette di creare una partita Personalizzata, non assegna punteggi quindi non serve loggare account. <br>
+        Premendo sui pezzi di destra li selezioni, cliccando sulla scacchiera li piazzi.
+    </p>
+    <h3>InfoPezzi</h3>
+    <p>
+        Una sezione dove faccio vedere le mosse dei vari pezzi.
+    </p>
+    <button onclick="menu()">Torna indietro</button>
+  </body>
+</html>

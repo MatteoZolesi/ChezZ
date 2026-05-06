@@ -1,0 +1,173 @@
+:root {
+  --colore-uno: rgb(67, 40, 24);
+  --colore-due: rgb(153, 88, 42);
+  --colore-tre: rgb(187, 148, 87);
+  --colore-quattro: rgb(255, 230, 167);
+  --colore-cinque: rgb(111, 29, 27);
+  --colore-ombra: rgb(40, 25, 15);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--colore-ombra);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+}
+
+#BarraLaterale {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 25%;
+  font-size: 3rem;
+  background-color: var(--colore-due);
+  overflow-y: auto;
+  overflow-x: hidden;
+  
+  scrollbar-width: none; /* Firefox */
+}
+
+#BarraLaterale::-webkit-scrollbar { /*per chrome*/
+  display: none;
+}
+
+#box {
+  width: 45%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+}
+
+#Spiegazioni{
+  width: 20%;
+  margin-left: 5%;
+  padding: 1%;
+  height: auto;
+  border-radius: 10px;
+  background-color: var(--colore-due);
+  font-size: 2rem;
+}
+
+#TestoSpiegazione{
+  font-size: 70%;
+  padding: 2%;
+  border-radius: 5px;
+  background-color: var(--colore-tre);
+}
+
+#ChessBoard-container{
+  border: 10px solid black;
+  height: 90%;
+  aspect-ratio: 1/1;
+  margin-left: 15%;
+  position: relative;
+}
+
+.Sez{
+  margin: 0 0 3rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.titolo{
+  border-top: 0.5rem solid black;
+  display:inline-block;
+  margin:0 auto;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.Sez :nth-child(2){
+  border-top: 0.5rem solid black;
+}
+
+.BoxInfoPezzo{
+  border-bottom: 0.5rem solid black;
+  width: 100%;
+  height: auto;
+  font-family: "Caveat", sans-serif;
+  background-color: var(--colore-tre);
+  color: white;
+  user-select: none;
+}
+
+.BoxInfoPezzo:hover{
+  background-color: var(--colore-cinque);
+}
+
+button {
+  margin: 3rem;
+  height: 5rem;
+  background-color: var(--colore-tre);
+  border: 5px solid black;
+  font-family: "Caveat", sans-serif;
+  width: 80%;
+  height: 12%;
+  color: white;
+  font-size: 2rem;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--colore-cinque);
+  border: 10px solid var(--colore-uno);
+  transform: scale(1.11);
+}
+
+#BoxPromozione{
+  position: absolute;      
+  top: 0;                  
+  left: 50%;               /* centro orizzontale */
+  transform: translateX(-50%); /* centraggio perfetto */
+  width: 44%;
+  height: 11%;
+  z-index: 9999;           /* sopra le celle */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+}
+
+#BoxPromozione div {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-right: 0.3rem solid black;
+    border-top: 0.3rem solid black;
+    border-bottom: 0.3rem solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#BoxPromozione div:first-child{
+  border-left: 0.3rem solid black;
+}
+
+#BoxPromozione div:nth-child(odd){
+  background:rgb(67, 40, 24);         
+}
+
+#BoxPromozione div:hover:nth-child(odd){
+  background-color: rgb(46, 78, 79);         
+}
+
+#BoxPromozione div:nth-child(even){
+  background:white;         
+}
+
+#BoxPromozione div:hover:nth-child(even){
+  background-color: rgb(103, 171, 173);         
+}
+
+#BoxPromozione img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}

@@ -1,0 +1,120 @@
+:root {
+  --colore-uno: rgb(67, 40, 24);
+  --colore-due: rgb(153, 88, 42);
+  --colore-tre: rgb(187, 148, 87);
+  --colore-quattro: rgb(255, 230, 167);
+  --colore-cinque: rgb(111, 29, 27);
+  --colore-ombra: rgb(40, 25, 15);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--colore-ombra);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#ChessBoard-container {
+  height: 90%;
+  aspect-ratio: 1/1;
+  margin-right: 5%;
+  border: 10px solid black;
+  position: relative;
+}
+
+.Immagine {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#MenuPrincipaleBTN:hover {
+  background-color: var(--colore-cinque);
+  border: 10px solid var(--colore-uno);
+  transform: scale(1.11);
+}
+
+#LoginMenu {
+  text-align: center;
+  font-family: "Caveat", sans-serif;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  height: auto; /*il form determina l’altezza */
+  z-index: 10;
+  background-color:var(--colore-due);
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+  
+input,
+button {
+  height: 5rem;
+  background-color: var(--colore-tre);
+  border: 5px solid black;
+  font-family: "Caveat", sans-serif;
+  width: 80%;
+  height: 12%;
+  color: white;
+  font-size: 2rem;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+input, .bottoneLogin{
+  border-top: 5px solid black;
+  margin-top: 5%;
+}
+
+input {
+  border-top: 5px solid black;
+  margin-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.InputHover:hover,
+button:enabled:hover {
+  background-color: var(--colore-cinque);
+  border: 10px solid var(--colore-uno);
+  transform: scale(1.11);
+}
+
+#Giocatore {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Avversario {
+  color: black;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Nomi {
+  margin: 5% 0 5% 0;
+  text-align: center;
+}
+
+#LoginMenu p{
+  margin: 0;
+}

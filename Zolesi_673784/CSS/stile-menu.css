@@ -1,0 +1,212 @@
+:root {
+  --colore-uno: rgb(67, 40, 24);
+  --colore-due: rgb(153, 88, 42);
+  --colore-tre: rgb(187, 148, 87);
+  --colore-quattro: rgb(255, 230, 167);
+  --colore-cinque: rgb(111, 29, 27);
+  --colore-ombra: rgb(40, 25, 15);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--colore-ombra);
+  margin: 0;
+}
+
+#LOGO {
+  margin: 0;
+  font-size: 7.6vw;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  color: var(--colore-uno);
+  text-shadow:
+    -15px 15px 0px var(--colore-tre),
+    -14px 14px 0px var(--colore-tre),
+    -13px 13px 0px var(--colore-tre),
+    -12px 12px 0px var(--colore-tre),
+    -11px 11px 0px var(--colore-tre),
+    -10px 10px 0px var(--colore-tre),
+    -9px 9px 0px var(--colore-tre),
+    -8px 8px 0px var(--colore-tre),
+    -7px 7px 0px var(--colore-tre),
+    -6px 6px 0px var(--colore-tre),
+    -5px 5px 0px var(--colore-tre),
+    -4px 4px 0px var(--colore-tre),
+    -3px 3px 0px var(--colore-tre),
+    -2px 2px 0px var(--colore-tre);
+}
+
+#TopBar {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+  background-color: var(--colore-uno);
+}
+
+#menu {
+  display: flex;
+  gap: 20px;
+}
+
+#Titolo {
+  color: var(--colore-quattro);
+  font-size: 4rem;
+  padding-left: 1rem;
+}
+
+nav p {
+  color: var(--colore-quattro);
+  font-size: 3rem;
+  padding-right: 1rem;
+}
+
+#Corpo {
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+}
+
+#BarraLaterale {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 25%;
+  font-size: 10rem;
+  background-color: var(--colore-due);
+}
+
+input,
+button {
+  height: 5rem;
+  background-color: var(--colore-tre);
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+  font-family: "Caveat", sans-serif;
+  width: 80%;
+  height: 12%;
+  color: white;
+  font-size: 2rem;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+input,
+.bottoneLogin {
+  border-top: 5px solid black;
+  margin-top: 5%;
+}
+
+input {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:disabled {
+  color: black;
+  background-color: rgba(115, 99, 74, 0.57);
+}
+
+#GiocaERuota {
+  border: 5px solid black;
+  margin: 5% 0 0 0;
+}
+
+#Annulla {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#GiocaERuota:enabled:hover {
+  background-color: var(--colore-cinque);
+  border: 10px solid var(--colore-uno);
+  transform: scale(1.11);
+}
+
+.InputHover:hover,
+button:enabled:hover {
+  background-color: var(--colore-cinque);
+  border: 10px solid var(--colore-uno);
+  transform: scale(1.11);
+}
+
+#box {
+  width: 75%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#ChessBoard-container {
+  border: 10px solid black;
+  height: 90%;
+  aspect-ratio: 1/1;
+  margin-left: 15%;
+}
+
+#LoginMenu {
+  text-align: center;
+  font-family: "Caveat", sans-serif;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: auto; /*il form determina l’altezza */
+  z-index: 10;
+  background-color: var(--colore-due);
+  padding: 1rem;
+  box-sizing: border-box;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+
+#LoginMenu p {
+  margin: 0;
+}
+
+.cliccabile:hover {
+  color: rgb(103, 171, 173);
+}
+
+.Azzurro {
+  color: rgb(103, 171, 173);
+}
+
+.tooltip-btn {
+  position: relative;
+}
+
+.tooltip-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+
+  bottom: 120%;
+  left: 50%;
+  transform: translate(-50%, 10px);
+
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s;
+  font-family: "League Spartan", sans-serif;
+}
+
+.tooltip-btn:disabled:hover::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
